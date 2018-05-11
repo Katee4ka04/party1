@@ -13,7 +13,7 @@ $form->setModel(new Friends($db));
 $form->onSubmit(function ($form) {
   if($form->model['age']>13){
       $form->model->save();
-      return $form->success('Record uptated');
+      return $notifier;
   }else{
   //  return $form->error('age','Иди в дочки матери играй!');
   return new \atk4\ui\jsExpression('document.location= "error.php" ');
@@ -30,7 +30,7 @@ $notifier->setColor('blue');
              ->setTransition('faded')
              ->setIcon('book');
 });
-$grid = $app->layout->add(['Grid']);
+$grid = $app->layout->add('Grid');
 $grid->setModel(new Friends($db));
 $grid->addQuickSearch(['name','surname','phone_number','age']);
 
