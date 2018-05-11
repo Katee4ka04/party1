@@ -17,7 +17,8 @@ $form->onSubmit(function ($form) {
   }else{
   //  return $form->error('age','Иди в дочки матери играй!');
   return new \atk4\ui\jsExpression('document.location= "error.php" ');
-  }
+}
+});
 
   $form->onSubmit(function ($form) {
     $notifier = new \atk4\ui\jsNotify();
