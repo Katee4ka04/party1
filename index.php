@@ -13,6 +13,14 @@ $form->setModel(new Friends($db));
 $form->onSubmit(function ($form) {
   if($form->model['age']>13){
       $form->model->save();
+      $notifier = new \atk4\ui\jsNotify();
+  $notifier->setColor('blue');
+    $notifier->setPosition9('center');
+    $notifier->setWidth(50)
+
+               ->setContent('Text')
+               ->setTransition('faded')
+               ->setIcon('book');
       return $notifier;
   }else{
   //  return $form->error('age','Иди в дочки матери играй!');
