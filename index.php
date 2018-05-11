@@ -28,16 +28,6 @@ $form->onSubmit(function ($form) {
 }
 });
 
-  $form->onSubmit(function ($form) {
-    $notifier = new \atk4\ui\jsNotify();
-$notifier->setColor('blue');
-  $notifier->setPosition9('center');
-  $notifier->setWidth(50)
-
-             ->setContent('Text')
-             ->setTransition('faded')
-             ->setIcon('book');
-});
 $grid = $app->layout->add('Grid');
 $grid->setModel(new Friends($db));
 $grid->addQuickSearch(['name','surname','phone_number','age']);
