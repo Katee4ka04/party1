@@ -12,7 +12,7 @@ $form->onSubmit(function ($form) {
       $form->model->save();
       $notifier = new \atk4\ui\jsNotify();
   $notifier->setColor('blue');
-    $notifier->setPosition9('center');
+    $notifier->setPosition('center');
     $notifier->setWidth(50)
 
                ->setContent('Text')
