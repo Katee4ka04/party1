@@ -3,7 +3,7 @@
 require 'conection.php';
 require 'app.php';
 $app = new App('admin');
-$app->initLayout("Centered");
+
 
 $label=$app->add(['Label',$_SESSION['nick']]);
 

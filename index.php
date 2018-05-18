@@ -1,12 +1,9 @@
 <?PHP
-require 'conection.php';
+require 'app.php';
 
-$app = new \atk4\ui\App('SnowwA!');
-$app->initLayout("Centered");
-
+$app = new App('public');
 $_SESSION['nick'] = 'Artik292';
 $_SESSION['nick'] = 'katee4ka04';
-
 
 $form=$app->layout->add('Form');
 $form->setModel(new Friends($db));
