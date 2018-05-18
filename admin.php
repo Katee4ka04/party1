@@ -1,6 +1,6 @@
 <?PHP
 
-require 'conection.php';
+require 'connection.php';
 require 'app.php';
 $app = new App('admin');
 
