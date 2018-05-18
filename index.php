@@ -19,7 +19,7 @@ $form->onSubmit(function ($form) {
                ->setTransition('faded')
                ->setIcon('book');
       return $notifier; */
-      return $form->success('Record uptated');
+      return new \atk4\ui\jsExpression('document.location= "success.php" ');
   }else{
   //  return $form->error('age','Иди в дочки матери играй!');
   return new \atk4\ui\jsExpression('document.location= "error.php" ');
