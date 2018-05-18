@@ -1,7 +1,8 @@
 <?PHP
 
 require 'conection.php';
-$app = new \atk4\ui\App('АДминка');
+require 'app.php';
+$app = new App('admin');
 $app->initLayout("Centered");
 
 $label=$app->add(['Label',$_SESSION['nick']]);
