@@ -10,7 +10,7 @@ $form->setModel(new Friends($db));
 $form->onSubmit(function ($form) {
   if($form->model['age']>13){
       $form->model->save();
-      $notifier = new \atk4\ui\jsNotify();
+    /*  $notifier = new \atk4\ui\jsNotify();
   $notifier->setColor('blue');
     $notifier->setPosition('center');
     $notifier->setWidth(50)
@@ -18,10 +18,12 @@ $form->onSubmit(function ($form) {
                ->setContent('Text')
                ->setTransition('faded')
                ->setIcon('book');
-      return $notifier;
+      return $notifier; */
+      return $form->success('Record uptated');
   }else{
   //  return $form->error('age','Иди в дочки матери играй!');
   return new \atk4\ui\jsExpression('document.location= "error.php" ');
+
 }
 });
 
