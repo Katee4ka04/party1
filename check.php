@@ -1,6 +1,6 @@
 <?PHP
 
-require 'conection.php';
+require 'connection.php';
 $app = new \atk4\ui\App('АДминка');
 $app->initLayout("Centered");
 
